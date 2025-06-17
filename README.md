@@ -1,1 +1,1 @@
-# 📘 LeetCode Practice Problems
+# 📘 DSA Problems
