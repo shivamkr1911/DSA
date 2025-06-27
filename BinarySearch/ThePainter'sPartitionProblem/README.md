@@ -1,4 +1,4 @@
-# The Painter's Partition Problem-II
+# The Painter's Partition Problem
 
 Dilpreet wants to paint his dog's home that has `n` boards with different lengths. The length of `i`th board is given by `arr[i]` where `arr[]` is an array of `n` integers. He hired `k` painters for this work and each painter takes 1 unit time to paint 1 unit of the board.
 
