@@ -75,13 +75,15 @@ public:
         for (int gasStations = 1; gasStations <= k; gasStations++)
         {
             auto tp = pq.top();
-            pq.pop();
+            pq.pop(); // Get segment with largest length
             int secInd = tp.second;
-            howMany[secInd]++;
+
+            howMany[secInd]++; // Add station to that segment
 
             long double iniDiff = stations[secInd + 1] - stations[secInd];
             long double newSecLen = iniDiff / (long double)(howMany[secInd] + 1);
-            pq.push({newSecLen, secInd});
+
+            pq.push({newSecLen, secInd}); // Push updated segment back to heap
         }
 
         return pq.top().first; // Max distance after placing k stations
