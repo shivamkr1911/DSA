@@ -102,12 +102,16 @@ private:
         int cnt = 0;
         for (int i = 1; i < arr.size(); i++)
         {
+            // Calculate stations needed between arr[i-1] and arr[i]
             int numInBetween = ((arr[i] - arr[i - 1]) / dist);
+
+            // If exactly divisible, adjust to avoid extra station
             if ((arr[i] - arr[i - 1]) == (dist * numInBetween))
                 numInBetween--;
-            cnt += numInBetween;
+
+            cnt += numInBetween; // Add to total count
         }
-        return cnt;
+        return cnt; // Total stations needed for this max distance
     }
 
 public:
