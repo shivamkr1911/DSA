@@ -6,22 +6,16 @@ Given string `s` consisting only a,b,c. Return the number of substrings containi
 
 ### Example 1:
 
-**Input:**  
-abcabc  
-**Output:**  
-10  
-**Explanation:**  
-The required substrings are "abc", "abca", "abcab", "abcabc",  
-"bca", "bcab", "bcabc", "cab", "cabc" and "abc".
+**Input:** abcabc  
+**Output:** 10  
+**Explanation:** The required substrings are "abc", "abca", "abcab", "abcabc", "bca", "bcab", "bcabc", "cab", "cabc" and "abc".
 
 ---
 
 ### Example 2:
 
-**Input:**  
-aaacb  
-**Output:**  
-3
+**Input:** aaacb  
+**Output:** 3
 
 ---
 
