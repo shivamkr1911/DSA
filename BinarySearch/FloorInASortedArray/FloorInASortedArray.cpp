@@ -19,6 +19,6 @@ public:
                 high = mid - 1; // Move left if mid is too large
         }
 
-        return (high >= 0) ? high : -1; // Return index of floor, else -1 if not found
+        return high; // Return index of floor
     }
 };
