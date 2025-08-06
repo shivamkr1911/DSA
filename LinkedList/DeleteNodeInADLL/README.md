@@ -1,45 +1,31 @@
-# Insertion at Doubly Linked List
+# Delete Node in a Doubly Linked List
 
-Given the head of a doubly-linked list, a position `p`, and an integer `x`, the task is to add a new node with value `x` at the position just after the `p`ᵗʰ node in the doubly linked list and return the head of the updated list.
-
-**Note:**
-The position is 0-based indexed.
+Given a Doubly Linked List and a position, the task is to delete a node from the given position (position starts from 1) in the doubly linked list and return the head of the modified doubly linked list.
 
 ---
 
 ### Example 1:
-
 ```
 Input:
-p = 2, x = 6
-Linked List:
-2 <-> 4 <-> 5
-
+LinkedList = 1 <--> 3 <--> 4, x = 3
 Output:
-2 <-> 4 <-> 5 <-> 6
+1 <--> 3
 
 Explanation:
-Insert a node of value 6 after the 2nd node.
+After deleting the node at position 3 (position starts from 1), the linked list will now be 1 <--> 3.
 ```
 
 ### Example 2:
-
 ```
 Input:
-p = 0, x = 44
-Linked List:
-1 <-> 2 <-> 3 <-> 4
-
+LinkedList = 1 <--> 5 <--> 2 <--> 9, x = 1
 Output:
-1 <-> 44 <-> 2 <-> 3 <-> 4
-
-Explanation:
-Insert a node of value 44 after the 0th node.
+5 <--> 2 <--> 9
 ```
 
 ---
 
 ### Constraints:
-
-* 0 ≤ p < list size ≤ 10⁴
-* 1 ≤ x ≤ 10⁴
+- 2 ≤ size of the linked list ≤ 10⁶  
+- 1 ≤ x ≤ size of the linked list  
+- 1 ≤ node->data ≤ 10⁴
