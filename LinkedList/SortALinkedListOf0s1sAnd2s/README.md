@@ -33,11 +33,6 @@ After arranging all the 0s, 1s and 2s in the given format, the output will be 0 
 
 ---
 
-**Example Diagram:**  
-*(Add screenshot here if available)*
-
----
-
 ## Constraints
 
 - 1 ≤ number of nodes ≤ 10⁶  
