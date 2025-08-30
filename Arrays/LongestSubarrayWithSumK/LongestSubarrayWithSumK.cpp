@@ -29,7 +29,7 @@ public:
         }
         return maxLen;
 
-        // Better solution - Works when array has negative numbers also
+        // Better solution Or Optimal for arr with positive or negative values
         /*
         int n = arr.size();
         int sum = 0;                       // prefix sum
