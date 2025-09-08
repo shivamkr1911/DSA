@@ -4,37 +4,32 @@ using namespace std;
 class Solution
 {
 private:
-    // Helper function to check if a number has no zero digit
+    // Helper function to check if a number contains any '0' digit
     bool isNonZero(int num)
     {
         while (num > 0)
         {
             if (num % 10 == 0)
-                return false; // If any digit is 0 → invalid
-            num /= 10;        // Remove last digit
+                return false; // If digit is 0 → return false
+            num /= 10;        // Remove the last digit
         }
-        return true; // All digits are non-zero
+        return true; // No zero found → valid number
     }
 
 public:
     vector<int> getNoZeroIntegers(int n)
     {
-        int first = 1;      // Start with the smallest possible number
-        int second = n - 1; // Complementary number so that first + second = n
+        int a = 1;     // Start with 1 as the first number
+        int b = n - 1; // Second number so that a + b = n
 
-        // Iterate until first ≤ second
-        while (first <= second)
+        // Keep checking until both numbers have no zero digits
+        while (!isNonZero(a) || !isNonZero(b))
         {
-            // If both numbers have no zero digits → return the pair
-            if (isNonZero(first) && isNonZero(second))
-                return {first, second};
-
-            // Otherwise, move to the next candidate
-            first++;
-            second = n - first; // Update second accordingly
+            a++; // Try next possible 'a'
+            b--; // Adjust 'b' so sum remains n
         }
 
-        // Fallback (though problem guarantees a valid answer exists)
-        return {-1, -1};
+        // Return the valid pair
+        return {a, b};
     }
 };
