@@ -1,3 +1,7 @@
+// Recursive solution for subset sum count.
+// Time: O(2^n) → works only for small n, used for understanding recursion.
+// For large constraints, must be optimized using DP (O(n * k)).
+
 #include <bits/stdc++.h>
 using namespace std;
 
