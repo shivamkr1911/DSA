@@ -6,7 +6,7 @@ Given two positive integers `n` and `k`, check if the k-th index bit of `n` is s
 
 ---
 
-## Examples:
+## Example 1:
 
 **Input:**  
 n = 4, k = 0  
@@ -17,6 +17,8 @@ Binary representation of 4 is `100`, in which 0th index bit from LSB is not set.
 
 ---
 
+## Example 2:
+
 **Input:**  
 n = 4, k = 2  
 **Output:**  
@@ -25,6 +27,8 @@ true
 Binary representation of 4 is `100`, in which 2nd index bit from LSB is set. So, return true.
 
 ---
+
+## Example 3:
 
 **Input:**  
 n = 500, k = 3  
