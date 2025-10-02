@@ -1,8 +1,9 @@
-// =============== Recursive and Backtracking Solution ===============
 #include <bits/stdc++.h>
 using namespace std;
 
-class Solution
+// =============== Recursive and Backtracking Solution ===============
+
+class Solution1
 {
 private:
     // Backtracking function to generate subsets
@@ -37,23 +38,28 @@ public:
 };
 
 // =============== Bit Manipulation Solution ===============
-/*
-class Solution {
+
+class Solution2
+{
 public:
-    vector<vector<int>> subsets(vector<int>& nums) {
-        int n = nums.size();                        // Number of elements in nums
-        int totalSubsets = (1 << n);                // Total subsets = 2^n (each element can either be present or absent)
-        vector<vector<int>> ans;                    // To store all subsets
+    vector<vector<int>> subsets(vector<int> &nums)
+    {
+        int n = nums.size();         // Number of elements in nums
+        int totalSubsets = (1 << n); // Total subsets = 2^n (each element can either be present or absent)
+        vector<vector<int>> ans;     // To store all subsets
 
         // Iterate through all numbers from 0 to 2^n - 1
         // Each number represents a subset in binary form
-        for (int num = 0; num < totalSubsets; num++) {
-            vector<int> subset;                     // Current subset
+        for (int num = 0; num < totalSubsets; num++)
+        {
+            vector<int> subset; // Current subset
 
             // Check each bit of num
-            for (int i = 0; i < n; ++i) {
+            for (int i = 0; i < n; ++i)
+            {
                 // If the i-th bit is set in num, include nums[i] in the subset
-                if (num & (1 << i)) {
+                if (num & (1 << i))
+                {
                     subset.push_back(nums[i]);
                 }
             }
@@ -62,7 +68,6 @@ public:
             ans.push_back(subset);
         }
 
-        return ans;                                 // Return all subsets
+        return ans; // Return all subsets
     }
 };
-*/
