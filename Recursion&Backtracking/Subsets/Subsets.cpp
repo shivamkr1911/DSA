@@ -34,3 +34,34 @@ public:
         return res;
     }
 };
+
+// Bit Manipulation Solution
+/*
+class Solution {
+public:
+    vector<vector<int>> subsets(vector<int>& nums) {
+        int n = nums.size();                        // Number of elements in nums
+        int totalSubsets = (1 << n);                // Total subsets = 2^n (each element can either be present or absent)
+        vector<vector<int>> ans;                    // To store all subsets
+
+        // Iterate through all numbers from 0 to 2^n - 1
+        // Each number represents a subset in binary form
+        for (int num = 0; num < totalSubsets; num++) {
+            vector<int> subset;                     // Current subset
+
+            // Check each bit of num
+            for (int i = 0; i < n; ++i) {
+                // If the i-th bit is set in num, include nums[i] in the subset
+                if (num & (1 << i)) {
+                    subset.push_back(nums[i]);
+                }
+            }
+
+            // Add the constructed subset to the result
+            ans.push_back(subset);
+        }
+
+        return ans;                                 // Return all subsets
+    }
+};
+*/
