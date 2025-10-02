@@ -1,4 +1,4 @@
-// Recursvie and Backtracking Solution
+// =============== Recursive and Backtracking Solution ===============
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -36,7 +36,7 @@ public:
     }
 };
 
-// Bit Manipulation Solution
+// =============== Bit Manipulation Solution ===============
 /*
 class Solution {
 public:
