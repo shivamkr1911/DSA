@@ -13,10 +13,10 @@ A number can contain multiple digits.
 num = "123", target = 6
 
 **Output:**  
-["1*2*3","1+2+3"]
+["1\*2\*3","1+2+3"]
 
 **Explanation:**  
-Both "1*2*3" and "1+2+3" evaluate to 6.
+Both "1\*2\*3" and "1+2+3" evaluate to 6.
 
 ---
 
@@ -26,10 +26,10 @@ Both "1*2*3" and "1+2+3" evaluate to 6.
 num = "232", target = 8
 
 **Output:**  
-["2*3+2","2+3*2"]
+["2\*3+2","2+3\*2"]
 
 **Explanation:**  
-Both "2*3+2" and "2+3*2" evaluate to 8.
+Both "2\*3+2" and "2+3\*2" evaluate to 8.
 
 ---
 
