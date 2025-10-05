@@ -6,6 +6,8 @@ Given an **m x n** matrix `mat`, return an array of all the elements of the matr
 
 ## Example 1:
 
+![Example](Example.png)
+
 **Input:**  
 mat = [[1,2,3],[4,5,6],[7,8,9]]
 
