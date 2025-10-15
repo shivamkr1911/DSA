@@ -2,7 +2,7 @@
 using namespace std;
 
 // ================= Optimal Solution =================
-class Solution
+class Solution1
 {
 public:
     int maxIncreasingSubarrays(vector<int> &nums)
@@ -39,7 +39,7 @@ public:
 
 // ================= Brute Force Solution =================
 
-class Solution
+class Solution2
 {
 private:
     // Check if subarray starting at 'start' with length 'len' is strictly increasing
