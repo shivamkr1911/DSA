@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Optimal Solution
+// ================= Optimal Solution =================
 class Solution1
 {
 public:
@@ -29,7 +29,7 @@ public:
     }
 };
 
-// Brute Force
+// ================= Brute Force Solution =================
 
 class Solution2
 {
