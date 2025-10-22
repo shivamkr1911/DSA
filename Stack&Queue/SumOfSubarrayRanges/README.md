@@ -10,9 +10,13 @@ A subarray is a contiguous non-empty sequence of elements within an array.
 
 ### Example 1:
 
-Input: nums = [1,2,3]  
-Output: 4  
-Explanation: The 6 subarrays of nums are the following:  
+```
+Input: nums = [1,2,3]
+Output: 4
+```
+
+**Explanation:**
+The 6 subarrays of nums are the following:  
 [1], range = largest - smallest = 1 - 1 = 0  
 [2], range = 2 - 2 = 0  
 [3], range = 3 - 3 = 0  
@@ -25,9 +29,13 @@ So the sum of all ranges is 0 + 0 + 0 + 1 + 1 + 2 = 4.
 
 ### Example 2:
 
-Input: nums = [1,3,3]  
-Output: 4  
-Explanation: The 6 subarrays of nums are the following:  
+```
+Input: nums = [1,3,3]
+Output: 4
+```
+
+**Explanation:**
+The 6 subarrays of nums are the following:  
 [1], range = largest - smallest = 1 - 1 = 0  
 [3], range = 3 - 3 = 0  
 [3], range = 3 - 3 = 0  
@@ -40,8 +48,12 @@ So the sum of all ranges is 0 + 0 + 0 + 2 + 0 + 2 = 4.
 
 ### Example 3:
 
-Input: nums = [4,-2,-3,4,1]  
-Output: 59  
+```
+Input: nums = [4,-2,-3,4,1]
+Output: 59
+```
+
+**Explanation:**
 Explanation: The sum of all subarray ranges of nums is 59.
 
 ---
