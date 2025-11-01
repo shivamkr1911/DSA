@@ -14,6 +14,7 @@ Output: [4,5]
 Explanation:
 
 ![Example1](Example1.png)
+
 Remove the nodes with values 1, 2, and 3.
 
 ---
