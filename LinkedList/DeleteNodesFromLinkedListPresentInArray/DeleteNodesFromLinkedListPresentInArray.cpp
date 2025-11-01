@@ -46,7 +46,9 @@ public:
             }
         }
 
-        // Return the updated head
-        return dummy->next;
+        // Store the new head, delete the dummy, then return
+        ListNode *newHead = dummy->next;
+        delete dummy;
+        return newHead;
     }
 };
