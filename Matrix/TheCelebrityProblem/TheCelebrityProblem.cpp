@@ -24,6 +24,9 @@ public:
             }
         }
 
+        if (top > down)
+            return -1; // no potential celebrity
+
         // Step 2: Verify the potential celebrity
         for (int i = 0; i < n; ++i)
         {
