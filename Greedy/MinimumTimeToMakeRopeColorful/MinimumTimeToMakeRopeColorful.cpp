@@ -7,33 +7,34 @@ public:
     int minCost(string colors, vector<int> &neededTime)
     {
 
-        int n = colors.size();
-        int total = 0; // Total time to remove balloons
+        int prev = 0; // index of the previous balloon
+        int time = 0; // total time to remove balloons
 
-        int groupTotalTime = 0; // Sum of times in current same-color group
-        int groupMaxTime = 0;   // Max time in current same-color group
-
-        for (int i = 0; i < n; ++i)
+        // Traverse all balloons starting from the second one
+        for (int i = 1; i < colors.size(); ++i)
         {
 
-            // If color changes, process previous group
-            if (i > 0 && colors[i] != colors[i - 1])
+            // If two adjacent balloons have the same color
+            if (colors[i] == colors[prev])
             {
-                total += groupTotalTime - groupMaxTime;
-                // Keep the balloon with max time, remove the rest
 
-                groupTotalTime = 0; // Reset for next group
-                groupMaxTime = 0;
+                // Remove the one with smaller removal time
+                if (neededTime[prev] < neededTime[i])
+                {
+                    time += neededTime[prev]; // remove previous
+                    prev = i;                 // update to current balloon
+                }
+                else
+                {
+                    time += neededTime[i]; // remove current balloon
+                }
             }
-
-            // Add current balloon to the group
-            groupTotalTime += neededTime[i];
-            groupMaxTime = max(groupMaxTime, neededTime[i]);
+            else
+            {
+                prev = i; // move to next different color
+            }
         }
 
-        // Process the last group
-        total += groupTotalTime - groupMaxTime;
-
-        return total;
+        return time; // return total removal cost
     }
 };
