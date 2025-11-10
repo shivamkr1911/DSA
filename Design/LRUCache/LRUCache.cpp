@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// =============== Doubly Linked List + HashMap ===============
+// =============== Solution1 - Doubly Linked List + HashMap ===============
 
 class LRUCache1
 {
@@ -96,7 +96,7 @@ public:
     }
 };
 
-// =============== std::list + HashMap ===============
+// =============== Solution2 - std::list + HashMap ===============
 class LRUCache2
 {
     int cap;                                               // maximum capacity
