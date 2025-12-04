@@ -14,6 +14,7 @@ Output: 4
 ```
 
 Explanation: The 4 subarrays are bolded and underlined below:
+
 ![Explanation](Explanation.png)
 
 ---
