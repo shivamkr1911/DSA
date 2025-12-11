@@ -2,8 +2,7 @@
 using namespace std;
 
 // Recursive Solution
-
-class Solution
+class Solution1
 {
 private:
     // Recursive binary search
@@ -29,9 +28,7 @@ public:
 };
 
 // Iterative Solution
-
-/*
-class Solution
+class Solution2
 {
 public:
     int search(vector<int> &nums, int target)
@@ -52,4 +49,3 @@ public:
         return -1; // Not found
     }
 };
-*/
