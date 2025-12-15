@@ -38,8 +38,9 @@ Note that [8,6] is not a smooth descent period as 8 - 6 ≠ 1.
 ```
 Input: prices = [1]
 Output: 1
-Explanation: There is 1 smooth descent period: [1]
 ```
+
+Explanation: There is 1 smooth descent period: [1]
 
 ---
 
