@@ -6,39 +6,39 @@ class Solution
 public:
     int bestClosingTime(string customers)
     {
-        int n = customers.size();
+        int curPenalty = 0;
 
-        int totalY = 0;
-        // Count total 'Y' (customers arriving after opening)
+        // Initial penalty if shop closes at hour 0 (all 'Y' are missed)
         for (char c : customers)
-            totalY += (c == 'Y');
+        {
+            if (c == 'Y')
+            {
+                curPenalty++;
+            }
+        }
 
-        // If no customers at all, best to close immediately
-        if (totalY == 0)
-            return 0;
+        int minPenalty = curPenalty; // minimum penalty observed so far
+        int ans = 0;                 // best closing hour
 
-        int penalty = totalY;    // initial penalty if shop closes at time 0
-        int minPenalty = totalY; // minimum penalty observed
-        int totalN = 0;          // count of 'N' before current hour
-        int ans = 0;             // best closing hour
-
-        // Try closing after each hour
-        for (int i = 0; i < n; ++i)
+        // Try closing after each hour (moving closing time from i to i+1)
+        for (int i = 0; i < customers.size(); ++i)
         {
 
-            // Update penalties based on current customer
-            if (customers[i] == 'N')
-                totalN++; // penalty for staying open with no customers
-            else
-                totalY--; // fewer customers left after closing
-
-            // Total penalty = customers missed after closing + idle open hours
-            penalty = totalY + totalN;
-
-            // Update minimum penalty and closing time
-            if (penalty < minPenalty)
+            // If current char is 'Y', we are now OPEN for it, so penalty decreases
+            if (customers[i] == 'Y')
             {
-                minPenalty = penalty;
+                curPenalty--;
+            }
+            // If current char is 'N', we are now OPEN for it, so penalty increases
+            else
+            {
+                curPenalty++;
+            }
+
+            // Update answer if better penalty found
+            if (curPenalty < minPenalty)
+            {
+                minPenalty = curPenalty;
                 ans = i + 1; // close after hour i
             }
         }
